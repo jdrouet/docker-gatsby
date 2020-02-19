@@ -1,0 +1,19 @@
+name: build gatsby docker images
+
+on:
+  push:
+    branches:
+      - '!master'
+
+jobs:
+  build-image:
+    name: build gatsby images and test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: ensure I can build a project based on gatsby
+        run: make test
+
