@@ -1,6 +1,9 @@
 name: build and push gatsby
 
 on:
+  schedule:
+    # every 2 days at 2am
+    - cron: '0 2 */2 * *'
   push:
     branches:
       - master
