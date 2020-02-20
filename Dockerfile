@@ -1,7 +1,7 @@
 FROM node:lts-buster-slim
 
 RUN apt-get update \
-  && apt-get install -y libgl1 libxi6 \
+  && apt-get install -y libgl1 libxi6 python3 \
   && rm -rf /var/lib/apt/lists/*
 
 # disable sending usage telemetry to gatsby

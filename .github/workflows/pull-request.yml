@@ -1,9 +1,6 @@
 name: build gatsby docker images
 
-on:
-  push:
-    branches:
-      - '!master'
+on: pull_request
 
 jobs:
   build-image:
